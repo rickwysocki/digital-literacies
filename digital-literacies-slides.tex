@@ -1,4 +1,4 @@
-% Created 2026-09-21 Mon 13:41
+% Created 2026-09-21 Mon 15:05
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -23,16 +23,45 @@
  pdfsubject={},
  pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
  pdflang={English}}
-\begin{document}
+\usepackage{calc}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelsep}
+\setlength{\csllabelsep}{0.6em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{0.45em * 0}
+\newenvironment{cslbibliography}[2] % 1st arg. is hanging-indent, 2nd entry spacing.
+ {% By default, paragraphs are not indented.
+  \setlength{\parindent}{0pt}
+  % Hanging indent is turned on when first argument is 1.
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % Set entry spacing based on the second argument.
+  \setlength{\parskip}{\parskip +  #2\baselineskip}
+ }%
+ {}
+\newcommand{\cslblock}[1]{#1\hfill\break}
+\newcommand{\cslleftmargin}[1]{\parbox[t]{\csllabelsep + \csllabelwidth}{#1}}
+\newcommand{\cslrightinline}[1]
+  {\parbox[t]{\linewidth - \csllabelsep - \csllabelwidth}{#1}\break}
+\newcommand{\cslindent}[1]{\hspace{\cslhangindent}#1}
+\newcommand{\cslbibitem}[2]
+  {\leavevmode\vadjust pre{\hypertarget{citeproc_bib_item_#1}{}}#2}
+\makeatletter
+\newcommand{\cslcitation}[2]
+ {\protect\hyper@linkstart{cite}{citeproc_bib_item_#1}#2\hyper@linkend}
+\makeatother\begin{document}
 
 \maketitle
-\begin{frame}[label={sec:org7bed7a4}]{Content Strategy - Definition}
+\begin{frame}[label={sec:org15d48ac}]{Content Strategy - Definition}
 \begin{quote}
 Content strategy guides the planning, development, and management of content. It is a recognized field in user experience design, and it also draws from adjacent disciplines such as information architecture, content management, business analysis, digital marketing, and technical communication.
 -- \href{https://en.wikipedia.org/wiki/Content\_strategy}{Wikipedia}
 \end{quote}
 \end{frame}
-\begin{frame}[label={sec:org6f72d98}]{Content Strategy - Rhetorical Elements}
+\begin{frame}[label={sec:org817b749}]{Content Strategy - Rhetorical Elements}
 \begin{itemize}
 \item Audience
 \item Purpose
@@ -41,17 +70,17 @@ Content strategy guides the planning, development, and management of content. It
 \item Circulation
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org74d6990}]{Content Strategy - Processes}
-According to (Clark, Dave, 2018), content strategy:
+\begin{frame}[label={sec:org2e24ae4}]{Content Strategy - Processes}
+According to Clark, content strategy:
 \begin{itemize}
 \item Integrates content, organizations, and its members at all stages of writing.
 \item Aligns with authorial/organizational goals.
 \item Emphasizes collaborative writing and knowledge.
 \item Offers \alert{repeatable} workflows.
-\item Develops new understandings of methods and tools.
+\item Develops new understandings of methods and tools (65).
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org240384c}]{Rhetorical Velocity}
+\begin{frame}[label={sec:org32313cb}]{Rhetorical Velocity}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{/Users/rickwysocki/Org/2026/fall/eng-213/images/rhetorical-velocity.png}
